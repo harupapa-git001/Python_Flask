@@ -1,0 +1,52 @@
+Flaskの起動について
+
+ex.
+
+FlaskStudy/
+     |-application/  [$python3 -m venv applicationで生成]
+     |-app.py [pythonファイル]
+
+
+1.対象のワーキングフォルダに移動
+
+$cd [フォルダ名 = FlaskStudy]
+
+2.仮想環境の構築
+
+$python3 -m venv [ファイル名 = application]
+
+3.pip3にインストールされているモジュールをrequirements.txtにコピー[module error時]
+
+$pip3 freeze > requirements.txt
+
+4.パッケージのアクティベート
+
+$source application/bin/activate
+
+4.pip3でrequirements.txtをインストール[module error時]
+
+$pip3 install -r requirements.txt
+
+5.パッケージのデアクティベート
+
+$deactivate
+
+6.flaskのインストール
+
+$pip3 install flask
+
+7.FLASK_APPの定義
+
+$export FLASK_APP=app.py
+
+8.デバッグモードをオンにする場合[module error時]
+
+$ export FLASK_DEBUG=True
+
+9.flaskの起動
+
+$flask run
+
+10.ローカルホストでブラウザ確認
+
+localhost:5000
